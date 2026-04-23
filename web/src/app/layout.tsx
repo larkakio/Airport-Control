@@ -20,8 +20,9 @@ const body = DM_Sans({
   weight: ['400', '500', '600', '700'],
 });
 
+/** Base.dev app id — must match `<meta name="base:app_id" />` for domain verification. */
 const baseAppId =
-  process.env.NEXT_PUBLIC_BASE_APP_ID ?? 'airport-control-dev';
+  process.env.NEXT_PUBLIC_BASE_APP_ID ?? '69e9c79a1eb4a1de6a95850c';
 
 /** Resolves OG / Twitter absolute URLs; avoids Next.js metadataBase warning when env is missing. */
 function getMetadataBase(): URL {

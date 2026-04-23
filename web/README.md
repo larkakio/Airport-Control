@@ -14,7 +14,9 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) locally, or the live app at [https://airport-control.vercel.app](https://airport-control.vercel.app).
+
+Set **Vercel project root** to `web` and copy variables from [`.env.example`](./.env.example) into the Vercel dashboard.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
