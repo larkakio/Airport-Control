@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --neon-cyan: #00f5ff;
+  --neon-magenta: #ff2bd6;
+  --neon-lime: #b8ff2b;
+  --bg-deep: #050508;
+}
+
+@theme inline {
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+body {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+.cyber-title {
+  background: linear-gradient(
+    120deg,
+    var(--neon-cyan) 0%,
+    #ffffff 35%,
+    var(--neon-magenta) 70%,
+    var(--neon-lime) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: drop-shadow(0 0 18px rgba(0, 245, 255, 0.35));
+}
+
+.cyber-primary-btn {
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-lime));
+  box-shadow:
+    0 0 20px rgba(0, 245, 255, 0.45),
+    0 0 40px rgba(184, 255, 43, 0.2);
+}
+
+.cyber-primary-btn:hover {
+  filter: brightness(1.08);
+}
+
+.cyber-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 245, 255, 0.03) 2px,
+    rgba(0, 245, 255, 0.03) 3px
+  );
+  pointer-events: none;
+}
+
+.cyber-overlay {
+  background: radial-gradient(
+    ellipse at 50% 20%,
+    rgba(0, 245, 255, 0.12),
+    rgba(5, 5, 8, 0.94) 55%
+  );
+  border: 1px solid rgba(0, 245, 255, 0.25);
+  border-radius: 1.25rem;
+  margin: 1rem;
+  box-shadow:
+    inset 0 0 60px rgba(255, 43, 214, 0.08),
+    0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.cyber-glitch-text {
+  text-shadow:
+    2px 0 rgba(255, 43, 214, 0.5),
+    -2px 0 rgba(0, 245, 255, 0.45);
+  animation: cyber-flicker 2.8s ease-in-out infinite;
+}
+
+@keyframes cyber-flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.92;
+  }
+  50% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 0.85;
+  }
+}
+
+.runway-ring {
+  animation: runway-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes runway-pulse {
+  0%,
+  100% {
+    stroke-opacity: 0.2;
+  }
+  50% {
+    stroke-opacity: 0.55;
+  }
+}
